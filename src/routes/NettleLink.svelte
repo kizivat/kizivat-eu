@@ -26,7 +26,7 @@
 		<img
 			src="nettle.svg"
 			alt="nettle.ai"
-			class="absolute bottom-1 h-5 inline-block align-baseline transform translate-y-1 -rotate-[2deg]"
+			class="absolute bottom-2 h-5 inline-block align-baseline transform translate-y-1 -rotate-[2deg]"
 			transition:fly={{ y: -10 }}
 		/>
 	{:else}
