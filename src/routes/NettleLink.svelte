@@ -33,7 +33,7 @@
 		<span
 			class="
 				bottom-0 text-black font-sans
-				after:block after:absolute after:w-full after:h-1/2 after:bg-[#fff600] after:bottom-1 after:-z-10 after:transform after:-rotate-3
+				after:block after:absolute after:w-full after:h-1/2 after:bg-[#fff600] after:bottom-1.5 after:-z-10 after:transform after:-rotate-3
 			"
 			class:absolute={textSpan}
 			transition:fly={{ y: 10 }}
