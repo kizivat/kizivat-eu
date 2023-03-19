@@ -16,6 +16,8 @@
 
 		gtag('config', env.PUBLIC_GTAG);
 	</script>
+
+	<title>David Kizivat</title>
 </svelte:head>
 
 {#key $page.route}
