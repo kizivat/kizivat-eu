@@ -14,7 +14,7 @@
 		}
 		gtag('js', new Date());
 
-		gtag('config', env.PUBLIC_GTAG);
+		gtag('config', 'G-1YY8N0TT7M');
 	</script>
 
 	<title>David Kizivat</title>
