@@ -20,6 +20,8 @@
 	<title>David Kizivat</title>
 </svelte:head>
 
-{#key $page.route}
-	<slot />
-{/key}
+<main class="h-screen max-w-screen-lg flex flex-col justify-center p-8">
+	{#key $page.route}
+		<slot />
+	{/key}
+</main>

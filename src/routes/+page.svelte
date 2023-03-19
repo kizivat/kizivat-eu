@@ -2,9 +2,7 @@
 	import Bio from './Bio.svelte';
 </script>
 
-<main class="h-screen max-w-screen-lg flex flex-col justify-center p-8">
-	<Bio />
-</main>
+<Bio />
 
 <style lang="postcss">
 	:global(html) {
