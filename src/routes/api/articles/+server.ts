@@ -1,4 +1,3 @@
-import { base } from '$app/paths';
 import { json } from '@sveltejs/kit';
 import type { ArticleMetadata } from './types';
 
@@ -16,7 +15,6 @@ const fetchMarkdownArticles = async () => {
 			const slugMatches = path.match(/\/articles\/(.*)\.md$/);
 
 			if (!slugMatches) throw new Error('Slug could not be parsed.');
-			console.log(base);
 
 			return {
 				...metadata,
@@ -31,5 +29,6 @@ const fetchMarkdownArticles = async () => {
 export const GET = async () => {
 	const allArticles = await fetchMarkdownArticles();
 	const sortedArticles = allArticles.sort((a, b) => (a.published > b.published ? -1 : 1));
-	return json(sortedArticles);
+	const filteredArticles = sortedArticles.filter((article) => article.published);
+	return json(filteredArticles);
 };

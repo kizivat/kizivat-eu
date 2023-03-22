@@ -13,24 +13,24 @@
 
 <div class="h-screen max-w-screen-lg flex flex-col gap-20 justify-center p-8">
 	<Bio />
-	<section>
-		<header>
-			<h2>
-				<span class="sr-only">Articles</span>
-				<div
-					aria-hidden
-					class="text-6xl flex justify-between -mb-4 font-black text-zinc-200/60 dark:text-zinc-800 opacity-0 w-1 transition-all duration-[1200ms] delay-100"
-					class:mounted
-				>
-					{#each 'articles' as char}
-						<span class="inline-block">{char}</span>
-					{/each}
-				</div>
-			</h2>
-		</header>
-		<ol class="flex flex-col gap-10">
-			{#each posts as post, i}
-				{#if post.published}
+	{#if posts.length > 0}
+		<section>
+			<header>
+				<h2>
+					<span class="sr-only">Articles</span>
+					<div
+						aria-hidden
+						class="text-6xl flex justify-between -mb-4 font-black text-zinc-200/60 dark:text-zinc-800 opacity-0 w-1 transition-all duration-[1200ms] delay-100"
+						class:mounted
+					>
+						{#each 'articles' as char}
+							<span class="inline-block">{char}</span>
+						{/each}
+					</div>
+				</h2>
+			</header>
+			<ol class="flex flex-col gap-10">
+				{#each posts as post, i}
 					<li>
 						<FlyIn y={60} duration={500} delay={(i + 2) * 300}>
 							<article class="font-serif [&>a>div]:hover:h-3">
@@ -62,10 +62,10 @@
 							</article>
 						</FlyIn>
 					</li>
-				{/if}
-			{/each}
-		</ol>
-	</section>
+				{/each}
+			</ol>
+		</section>
+	{/if}
 </div>
 
 <style lang="postcss">
