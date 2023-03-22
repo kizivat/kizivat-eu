@@ -2,6 +2,9 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	import { env } from '$env/dynamic/public';
+	import { fade } from 'svelte/transition';
+
+	$: console.log($page.url.pathname);
 </script>
 
 <svelte:head>
@@ -20,8 +23,10 @@
 	<title>David Kizivat</title>
 </svelte:head>
 
-<main class="h-screen max-w-screen-lg flex flex-col justify-center p-8">
-	{#key $page.route}
-		<slot />
+<div class="grid grid-cols-1 grid-rows-1 [&>main]:col-start-1">
+	{#key $page.url.pathname}
+		<main class="flex justify-center" in:fade={{ duration: 150, delay: 200 }}>
+			<slot />
+		</main>
 	{/key}
-</main>
+</div>

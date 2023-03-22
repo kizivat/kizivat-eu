@@ -6,8 +6,13 @@
 	const { content, metadata } = data;
 </script>
 
-<article>
-	<h1>{metadata?.title}</h1>
-	<p>Published: {metadata?.published}</p>
+<article class="font-serif">
+	<h1 class="text-3xl font-bold">{metadata?.title}</h1>
+
+	{#if metadata?.published}
+		<p>Published: {Intl.DateTimeFormat().format(new Date(metadata.published))}</p>
+	{/if}
+
+	<p class="italic">{metadata?.perex}</p>
 	<svelte:component this={content} />
 </article>

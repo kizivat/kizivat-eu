@@ -1,17 +1,13 @@
 import { error } from '@sveltejs/kit';
 import type { ComponentType } from 'svelte';
-
-interface PostMetadata {
-	title: string;
-	published: Date;
-}
+import type { ArticleMetadata } from '../../../../../../../../../../Users/dkizivat/Developer/projects/kizivat-eu/src/routes/api/articles/types';
 
 export const load = async ({ params }) => {
 	try {
 		const post = await import(`../../../../lib/content/articles/${params.slug}.md`);
 
 		const content: ComponentType = post.default;
-		const metadata: PostMetadata = post.metadata;
+		const metadata: ArticleMetadata = post.metadata;
 
 		if (post) {
 			return {
