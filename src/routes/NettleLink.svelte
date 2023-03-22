@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { crossfade, fly, scale } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
 	let hovered = false;
 
@@ -27,7 +27,7 @@
 			src="nettle.svg"
 			alt="nettle.ai"
 			class="absolute bottom-2 h-5 inline-block align-baseline transform translate-y-1 -rotate-[2deg]"
-			transition:fly={{ y: -10 }}
+			transition:fly|local={{ y: -10 }}
 		/>
 	{:else}
 		<span
@@ -36,7 +36,7 @@
 				after:block after:absolute after:w-full after:h-1/2 after:bg-[#fff600] after:bottom-1.5 after:-z-10 after:transform after:-rotate-3
 			"
 			class:absolute={textSpan}
-			transition:fly={{ y: 10 }}
+			transition:fly|local={{ y: 10 }}
 			bind:this={textSpan}
 		>
 			nettle.ai
