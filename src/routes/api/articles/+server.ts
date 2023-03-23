@@ -29,6 +29,8 @@ const fetchMarkdownArticles = async () => {
 export const GET = async () => {
 	const allArticles = await fetchMarkdownArticles();
 	const sortedArticles = allArticles.sort((a, b) => (a.published > b.published ? -1 : 1));
-	const publishedArticles = sortedArticles.filter((article) => article.published);
+	const publishedArticles = sortedArticles.filter(
+		(article) => import.meta.env.DEV || article.published
+	);
 	return json(publishedArticles);
 };
