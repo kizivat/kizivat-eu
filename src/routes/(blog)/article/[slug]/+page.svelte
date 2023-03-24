@@ -6,13 +6,36 @@
 	const { content, metadata } = data;
 </script>
 
-<article class="font-serif">
-	<h1 class="text-3xl font-bold">{metadata?.title}</h1>
+<svelte:head>
+	<title>{metadata?.title}</title>
+	<meta name="description" content={metadata?.perex} />
+	<meta name="keywords" content={metadata?.keywords.join(', ')} />
+</svelte:head>
 
-	{#if metadata?.published}
-		<p>Published: {Intl.DateTimeFormat().format(new Date(metadata.published))}</p>
-	{/if}
+<article class="py-10 font-serif max-w-prose text-justify leading-10 tracking-wide text-xl">
+	<header class="mb-20">
+		<h1 class="text-5xl tracking-widest font-sans text-left font-bold mb-5">{metadata?.title}</h1>
 
-	<p class="italic">{metadata?.perex}</p>
-	<svelte:component this={content} />
+		{#if metadata?.published}
+			<p class="font-mono text-sm">
+				Published: <time datetime={metadata.published}
+					>{Intl.DateTimeFormat().format(new Date(metadata.published))}</time
+				>
+			</p>
+		{/if}
+	</header>
+
+	<section>
+		<p class="italic mb-14">{metadata?.perex}</p>
+	</section>
+
+	<section>
+		<svelte:component this={content} />
+	</section>
 </article>
+
+<style lang="postcss">
+	:global(article p) {
+		margin-bottom: 2rem;
+	}
+</style>

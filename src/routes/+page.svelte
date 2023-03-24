@@ -11,7 +11,7 @@
 	onMount(() => (mounted = true));
 </script>
 
-<div class="h-screen max-w-screen-lg flex flex-col gap-20 justify-center p-8">
+<div class="h-screen max-w-prose flex flex-col gap-20 justify-center p-8">
 	<Bio />
 	{#if posts.length > 0}
 		<section>
@@ -58,7 +58,9 @@
 										</div>
 									</div>
 								</a>
-								<p class="p-1 text-zinc-800 dark:text-zinc-300">{post.perex}</p>
+								<p class="p-1 text-zinc-800 dark:text-zinc-300 text-justify">
+									{post.perex}
+								</p>
 							</article>
 						</FlyIn>
 					</li>
