@@ -39,7 +39,7 @@
 										relative inline-block text-3xl text-blue-600 dark:text-white font-sans font-bold tracking-widest outline-none
 										focus-visible:ring-2 focus-visible:ring-offset-2 
 										focus-visible:ring-offset-white focus-visible:ring-black
-										dark:focus-visible:ring-offset-zinc-900 dark:focus-visible:ring-[#fff600]
+										dark:focus-visible:ring-offset-zinc-900 dark:focus-visible:ring-primary
 										[&:focus-visible>div]:h-3 transition-all
 									"
 									href="/article/{post.slug}"
@@ -49,7 +49,7 @@
 									</h3>
 									<div
 										aria-hidden
-										class="absolute bottom-1 z-10 w-full h-1 bg-[#fff600] ml-0 transition-all overflow-hidden"
+										class="absolute bottom-1 z-10 w-full h-1 bg-primary ml-0 transition-all overflow-hidden"
 									>
 										<div
 											class="max-w-[30ch] overflow-hidden whitespace-nowrap text-ellipsis absolute bottom-[-0.3rem] text-black translate-y-[-1px]"
