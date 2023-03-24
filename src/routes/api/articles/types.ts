@@ -3,5 +3,6 @@ export interface ArticleMetadata {
 	published: string;
 	updated?: Date;
 	perex: string;
+	keywords: string[];
 	slug: string;
 }

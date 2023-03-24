@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { ComponentType } from 'svelte';
-import type { ArticleMetadata } from '../../../../../../../../../../Users/dkizivat/Developer/projects/kizivat-eu/src/routes/api/articles/types';
+import type { ArticleMetadata } from '../../../api/articles/types';
 
 export const load = async ({ params }) => {
 	try {
