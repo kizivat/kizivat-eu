@@ -3,12 +3,11 @@
 	import { page } from '$app/stores';
 	import { env } from '$env/dynamic/public';
 	import { fade } from 'svelte/transition';
-
-	$: console.log($page.url.pathname);
 </script>
 
 <svelte:head>
 	<!-- Google tag (gtag.js) -->
+	<!-- TODO: Explore using env var -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id={env.PUBLIC_GTAG}"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];

@@ -4,7 +4,7 @@ import type { ArticleMetadata } from '../../../api/articles/types';
 
 export const load = async ({ params }) => {
 	try {
-		const post = await import(`../../../../lib/content/articles/${params.slug}.md`);
+		const post = await import(`../../../../lib/content/articles/${params.slug}.mdx`);
 
 		const content: ComponentType = post.default;
 		const metadata: ArticleMetadata = post.metadata;
