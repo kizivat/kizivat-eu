@@ -8,11 +8,11 @@ const config = {
 	kit: {
 		adapter: adapter()
 	},
-	extensions: ['.svelte', '.md'],
+	extensions: ['.svelte', '.md', '.mdx'],
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
-			extensions: ['.md'],
+			extensions: ['.md', '.mdx'],
 			remarkPlugins: [smartypants]
 		})
 	]
