@@ -7,6 +7,7 @@
 
 <svelte:head>
 	<!-- Google tag (gtag.js) -->
+	<!-- TODO: Explore using env var -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id={env.PUBLIC_GTAG}"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
