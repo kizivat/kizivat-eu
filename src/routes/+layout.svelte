@@ -3,8 +3,6 @@
 	import { page } from '$app/stores';
 	import { env } from '$env/dynamic/public';
 	import { fade } from 'svelte/transition';
-
-	$: console.log($page.url.pathname);
 </script>
 
 <svelte:head>
