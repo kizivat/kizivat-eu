@@ -5,14 +5,14 @@ type Resolver = () => Promise<{ metadata: ArticleMetadata }>;
 
 const fetchMarkdownArticles = async () => {
 	const allArticleFiles = import.meta.glob<true, string, Resolver>(
-		'/src/lib/content/articles/*.md'
+		'/src/lib/content/articles/*.mdx'
 	);
 	const iterableArticleFiles = Object.entries(allArticleFiles);
 
 	const allArticles = await Promise.all(
 		iterableArticleFiles.map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
-			const slugMatches = path.match(/\/articles\/(.*)\.md$/);
+			const slugMatches = path.match(/\/articles\/(.*)\.mdx?$/);
 
 			if (!slugMatches) throw new Error('Slug could not be parsed.');
 
