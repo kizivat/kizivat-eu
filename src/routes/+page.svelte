@@ -58,7 +58,9 @@
 										</div>
 									</div>
 								</a>
-								<p class="p-1 text-zinc-800 dark:text-zinc-300 text-justify">
+								<p
+									class="-ml-1 p-1 text-zinc-800 dark:text-zinc-300 text-justify tracking-wide leading-8"
+								>
 									{post.perex}
 								</p>
 							</article>
