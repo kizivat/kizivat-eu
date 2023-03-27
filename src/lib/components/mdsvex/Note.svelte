@@ -7,7 +7,8 @@
 <button
 	type="button"
 	class="
-    bg-primary/30 outline-none
+    h-min leading-none p-1 relative bg-primary/10 outline-none
+		after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:w-full
     focus:ring-2 focus:ring-zinc-800 dark:focus:ring-primary
   "
 	on:mouseenter={() => (show = true)}
@@ -21,7 +22,7 @@
 {#if show}
 	<div
 		class="
-    absolute inline-block p-6 text-base rounded bg-zinc-200 shadow-sm
+    z-10 max-w-[30ch] mr-5 text-left absolute inline-block p-6 text-base rounded bg-zinc-200 shadow-sm
     dark:shadow-[0 1px 2px 0px #fff] dark:bg-zinc-700
   "
 		transition:fly={{ x: 10 }}
