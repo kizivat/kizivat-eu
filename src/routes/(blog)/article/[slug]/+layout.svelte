@@ -2,8 +2,12 @@
 	<a
 		href="/"
 		class="
-			flex items-center text-xl tracking-wide transition-all
-			[&:hover>svg]:-translate-x-8 [&:hover>span]:-translate-x-4
+			flex items-center text-xl tracking-wide outline-none transition-all
+			focus-visible:ring-2 focus-visible:ring-offset-2 
+			focus-visible:ring-offset-white focus-visible:ring-black
+			dark:focus-visible:ring-offset-zinc-900 dark:focus-visible:ring-primary
+			[&:focus-visible>svg]:-translate-x-14 [&:focus-visible>span]:-translate-x-10
+			[&:hover>svg]:-translate-x-14 [&:hover>span]:-translate-x-10
 		"
 	>
 		<svg
