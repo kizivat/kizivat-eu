@@ -6,8 +6,6 @@
 			focus-visible:ring-2 focus-visible:ring-offset-2 
 			focus-visible:ring-offset-white focus-visible:ring-black
 			dark:focus-visible:ring-offset-zinc-900 dark:focus-visible:ring-primary
-			[&:focus-visible>svg]:-translate-x-14 [&:focus-visible>span]:-translate-x-10
-			[&:hover>svg]:-translate-x-14 [&:hover>span]:-translate-x-10
 		"
 	>
 		<svg
@@ -25,3 +23,20 @@
 	</a>
 </nav>
 <slot />
+
+<style lang="postcss">
+	a {
+		&:focus-visible > svg {
+			transform: translateX(calc(-1 * theme(spacing.14)));
+		}
+		&:focus-visible > span {
+			transform: translateX(calc(-1 * theme(spacing.10)));
+		}
+		&:hover > svg {
+			transform: translateX(calc(-1 * theme(spacing.14)));
+		}
+		&:hover > span {
+			transform: translateX(calc(-1 * theme(spacing.10)));
+		}
+	}
+</style>
