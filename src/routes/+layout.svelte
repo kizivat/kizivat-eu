@@ -24,7 +24,7 @@
 
 <div class="grid grid-cols-1 grid-rows-1 [&>main]:col-start-1">
 	{#key $page.url.pathname}
-		<main class="mx-auto py-10" in:fade={{ duration: 150, delay: 200 }}>
+		<main class="mx-auto p-8" in:fade={{ duration: 150, delay: 200 }}>
 			<slot />
 		</main>
 	{/key}

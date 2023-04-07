@@ -27,16 +27,16 @@
 <style lang="postcss">
 	a {
 		&:focus-visible > svg {
-			transform: translateX(calc(-1 * theme(spacing.14)));
+			transform: translateX(calc(-1 * theme(spacing.10)));
 		}
 		&:focus-visible > span {
-			transform: translateX(calc(-1 * theme(spacing.10)));
+			transform: translateX(calc(-1 * theme(spacing.8)));
 		}
 		&:hover > svg {
-			transform: translateX(calc(-1 * theme(spacing.14)));
+			transform: translateX(calc(-1 * theme(spacing.10)));
 		}
 		&:hover > span {
-			transform: translateX(calc(-1 * theme(spacing.10)));
+			transform: translateX(calc(-1 * theme(spacing.8)));
 		}
 	}
 </style>
