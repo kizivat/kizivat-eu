@@ -11,7 +11,7 @@
 	onMount(() => (mounted = true));
 </script>
 
-<div class="h-screen max-w-prose flex flex-col gap-20 justify-center p-8">
+<div class="h-screen max-w-screen-sm md:max-w-prose flex flex-col gap-20 justify-center">
 	<Bio />
 	{#if posts.length > 0}
 		<section>
@@ -44,7 +44,10 @@
 									"
 									href="/article/{post.slug}"
 								>
-									<h3 class="max-w-[30ch] overflow-hidden whitespace-nowrap text-ellipsis">
+									<h3
+										class="max-w-[20ch] md:max-w-[30ch] overflow-hidden whitespace-nowrap text-ellipsis"
+										title={post.title}
+									>
 										{post.title}
 									</h3>
 									<div

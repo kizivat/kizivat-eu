@@ -12,7 +12,12 @@
 	<meta name="keywords" content={metadata?.keywords.join(', ')} />
 </svelte:head>
 
-<article class="py-10 font-serif max-w-prose text-justify leading-10 tracking-wide text-xl">
+<article
+	class="
+		py-10 font-serif max-w-prose text-justify tracking-wide leading-8 text-lg
+		md:leading-10 md:text-xl
+	"
+>
 	<header class="flex flex-col gap-4 mb-20">
 		<h1 class="text-5xl tracking-widest font-sans text-left font-bold mb-5">{metadata?.title}</h1>
 
