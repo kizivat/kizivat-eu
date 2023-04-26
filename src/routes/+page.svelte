@@ -11,7 +11,7 @@
 	onMount(() => (mounted = true));
 </script>
 
-<div class="h-screen max-w-screen-sm md:max-w-prose flex flex-col gap-20 justify-center">
+<div class="mt-16 max-w-screen-sm md:max-w-prose flex flex-col gap-20 justify-center">
 	<Bio />
 	{#if posts.length > 0}
 		<section>
