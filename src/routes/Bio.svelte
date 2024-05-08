@@ -11,7 +11,7 @@
 <section>
 	<h1 class="text-5xl font-bold mb-8 tracking-[0.3rem]" class:mounted>David Kizivat</h1>
 	<p class="font-serif max-w-prose text-lg" class:mounted>
-		Software engineer at
+		Software developer at
 		<NettleLink /> and coding educator. I enjoy studying
 		<span class="text-zinc-400">(natural)</span> languages, CS and building stuff.
 	</p>
