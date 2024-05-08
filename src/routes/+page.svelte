@@ -33,7 +33,7 @@
 				{#each posts as post, i}
 					<li>
 						<FlyIn y={60} duration={500} delay={(i + 2) * 300}>
-							<article class="font-serif [&>a>div]:hover:h-3">
+							<article class="font-serif [&>a>div]:hover:h-[20%] break-words [hyphens:auto]">
 								<a
 									class="
 										relative inline-block text-3xl text-blue-600 dark:text-white font-sans font-bold tracking-widest outline-none
@@ -45,17 +45,17 @@
 									href="/article/{post.slug}"
 								>
 									<h3
-										class="max-w-[20ch] md:max-w-[30ch] overflow-hidden whitespace-nowrap text-ellipsis"
+										class="max-w-[20ch] md:max-w-[30ch] overflow-hidden text-ellipsis"
 										title={post.title}
 									>
 										{post.title}
 									</h3>
 									<div
 										aria-hidden
-										class="absolute bottom-1 z-10 w-full h-1 bg-primary ml-0 transition-all overflow-hidden"
+										class="absolute bottom-1 z-10 w-full h-[10%] bg-primary ml-0 transition-all overflow-hidden"
 									>
 										<div
-											class="max-w-[30ch] overflow-hidden whitespace-nowrap text-ellipsis absolute bottom-[-0.3rem] text-black translate-y-[-1px]"
+											class="max-w-[30ch] overflow-hidden text-ellipsis absolute bottom-[-0.3rem] text-black translate-y-[-1px]"
 										>
 											{post.title}
 										</div>
